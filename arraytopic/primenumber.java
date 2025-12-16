@@ -14,7 +14,7 @@ public class primenumber {
                      System.out.println(arr[i] + " " + "not prime");
                     break;
                 }
-                 System.out.println(arr[i] + "  " + "Is prime");
+               
             }
 
             if(isPrime){
