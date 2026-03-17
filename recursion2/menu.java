@@ -12,6 +12,7 @@ public class menu {
         System.out.println("Option 3 = Factorial:\n");
 
         System.out.println("Enter a option number:");
+        
         int desireNum = input.nextInt();
 
         if (desireNum == 1) {

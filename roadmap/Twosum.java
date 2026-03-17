@@ -1,0 +1,23 @@
+package roadmap;
+
+import java.util.HashMap;
+
+public class Twosum {
+    public static void main(String[] args) {
+        int arr[] = { 2, 7, 11, 15 };
+        int target = 9;
+
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for (int i = 0; i < arr.length; i++) {
+            int needed = target - arr[i];
+
+            if (map.containsKey(needed)) {
+                System.out.println("Pair Found! " + needed + ", " + arr[i]);
+            } else {
+                map.put(arr[i], i);
+            }
+        }
+    }
+
+}
