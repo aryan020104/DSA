@@ -1,4 +1,4 @@
-package roadmap;
+package roadmap.Stack;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -9,10 +9,10 @@ public class NextGreaterDistance {
         int[] result = new int[n];
         Stack<Integer> stack = new Stack<>();
 
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < arr.length; i++) {
             while (!stack.isEmpty() && arr[i] > arr[stack.peek()]) {
-                int prev = stack.pop();
-                result[i] = i - prev;
+                int j = stack.pop();
+                result[j] = i - j;
             }
 
             stack.push(i);
@@ -21,10 +21,10 @@ public class NextGreaterDistance {
     }
 
     public static void main(String[] args) {
-        int[] arr = { 5, 6, 7, 2, 9, 10 };
-        int[] distance = nextGreaterDistance(arr);
+        int[] arr = { 10, 1, 12, 13, 2, 3, 4, 16, 111 };
+        int[] greatest = nextGreaterDistance(arr);
 
-        System.out.println(Arrays.toString(distance));
+        System.out.println(Arrays.toString(greatest));
     }
 
 }

@@ -1,4 +1,4 @@
-package roadmap;
+package roadmap.Stack;
 
 import java.util.Arrays;
 import java.util.Stack;
@@ -6,15 +6,14 @@ import java.util.Stack;
 public class StockSpan {
     public static int[] stockspan(int[] arr) {
         int n = arr.length;
-        int result[] = new int[n];
+        int[] result = new int[n];
         Stack<Integer> stack = new Stack<>();
 
         for (int i = 0; i < n; i++) {
-
             while (!stack.isEmpty() && arr[stack.peek()] <= arr[i]) {
-                stack.pop();
+                  stack.pop();
+                
             }
-
             if (stack.isEmpty()) {
                 result[i] = i + 1;
             } else {
@@ -23,6 +22,7 @@ public class StockSpan {
             stack.push(i);
         }
         return result;
+        
     }
 
     public static void main(String[] args) {

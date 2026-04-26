@@ -1,4 +1,4 @@
-package roadmap;
+package roadmap.Array;
 
 public class palindromeCheck {
     public static void main(String[] args) {
